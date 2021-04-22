@@ -1,0 +1,49 @@
+/* section */
+
+.section_wrap{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+}
+
+.section_title{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sub_list{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+  
+.sub_list::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.prevBtn, .nextBtn{
+    position: absolute;
+    width : 30px;
+    height: 30px;
+    border-radius: 30px;
+    border-color: inherit;
+    color: gray;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none;
+    outline: none;
+}
+
+.prevBtn{
+    top : 130px;
+    left: 5px;
+}
+
+.nextBtn{
+    top : 130px;
+    right: 5px;
+}

@@ -1,0 +1,38 @@
+.sub_list li{
+    float: left;
+    /* position: absolute; */
+    width: 291px;
+    height: 350px;
+}
+  
+.sub_list li+li{
+    margin-left: 12px;
+}
+
+.sub_list .info .title{
+    font-size: 14px;
+    display: block;
+    line-height: 18px;
+    max-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient : vertical;
+    -webkit-line-clamp : 2;
+    margin-top: 10px;
+    font-weight: bold;
+}
+  
+.sub_list .info .category_link{
+    font-size: 12px;
+    line-height: 16px;
+    display:block;
+    margin-top: 30px;
+    color: rgb(81, 206, 242);
+}
+
+.img_box img{
+    display: block;
+    width: 291px;
+    height: 210px;
+}
