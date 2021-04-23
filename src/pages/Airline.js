@@ -5,7 +5,9 @@ class Abroad extends React.Component {
 
     render() {
         return(
-            <Section sectionTitle="항공"></Section>
+            <div className="page_wrap">
+                <Section sectionTitle="항공"></Section> 
+            </div>
         );
     }
 }

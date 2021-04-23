@@ -116,10 +116,14 @@ class Navigation extends React.Component{
         const menuItems = menuList.map(
             (item,index) => 
                 <li className="gnb_menu_item" key={item.id}>
-                    <a href={item.url}
+                    <Link to={item.url}
+                            onMouseOver = {(e)=>this.toggleActive(index,e)}
+                            className={item.active ? "active" : ""}
+                            >{item.title}</Link>
+                    {/* <a href={item.url}
                         onMouseOver = {(e)=>this.toggleActive(index,e)}
                         // pass parameter to event handler
-                        className={item.active ? "active" : ""}>{item.title}</a>
+                        className={item.active ? "active" : ""}>{item.title}</a> */}
                         { item.active && <Submenu items={item.submenu}></Submenu>} 
                 </li>
         );

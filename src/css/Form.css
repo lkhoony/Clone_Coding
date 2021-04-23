@@ -1,0 +1,26 @@
+.kolon_form{
+    width: 300px;
+    /* height: 400px; */
+    /* background-color: red; */
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-sizing: content-box;
+    border-radius: 5px;
+}
+
+.kolon_form_title{
+    text-align: left;
+    padding : 5px;
+}
+
+.first_title{
+    margin-bottom : 5px !important;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.second_title{
+    font-size: 20px;
+    line-height: 24px;
+}

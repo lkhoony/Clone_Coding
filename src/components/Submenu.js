@@ -17,7 +17,7 @@ class Submenu extends React.Component{
             (item, index) => 
                 <li className="submenu_item active" 
                     key={index}>
-                    <a href="#" className="submenu_link">
+                    <a href="" className="submenu_link">
                         <span>{item}</span>
                     </a>
                 </li>

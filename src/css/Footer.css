@@ -1,4 +1,16 @@
 #footer{
-    width: 1200px;
     margin: 10px auto;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    padding: 20px;
 }
+
+.copyright{
+    padding-bottom: 20px;
+}
+
+.sns_wrap{
+    text-align: center;
+    padding-bottom : 10px;
+}
+

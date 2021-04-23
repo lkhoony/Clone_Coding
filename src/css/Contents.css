@@ -21,6 +21,7 @@
     -webkit-line-clamp : 2;
     margin-top: 10px;
     font-weight: bold;
+    color: inherit !important;
 }
   
 .sub_list .info .category_link{

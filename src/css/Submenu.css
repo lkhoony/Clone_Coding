@@ -1,11 +1,12 @@
 .gnb_submenu{
     position: absolute;
     display: block;
-    top: 57px;
+    top: 62.6px;
     left: 0px;
-    width: 1200px;
+    width : 100%;
+    min-width: 1200px;
     box-sizing: border-box;
-    height: 56px;
+    /* height: 56px; */
     padding-left : 120px;
     background-color: whitesmoke;
 }
@@ -21,10 +22,14 @@
   
 .submenu_link {
     display: block;
-    padding: 15px 15px 0 0;
+    padding: 20px 10px;
     font-size: 15px;
     line-height: 20px;
     color: #333;
+}
+
+.submenu_link:hover {
+    color: #e5236d !important;
 }
   
 .menu_item.active .submenu{
