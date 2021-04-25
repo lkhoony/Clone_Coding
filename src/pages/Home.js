@@ -1,12 +1,12 @@
 import React from 'react';
-import {Section, Form} from '../components';
+import {Section, Form, Submain } from '../components';
 
 class Abroad extends React.Component {
 
     render() {
         return(
             <div className="page_wrap">
-                <Form></Form>
+                <Submain></Submain>
                 <Section sectionTitle="해외여행"></Section>
                 <Section sectionTitle="국내여행"></Section>
                 <Section sectionTitle="항공"></Section>
