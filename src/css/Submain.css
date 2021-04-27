@@ -1,3 +1,9 @@
 .submain{
     margin : 0 auto;
+    width: 1200px;
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 80px 0;
 }

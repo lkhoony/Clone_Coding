@@ -24,7 +24,7 @@ class Submenu extends React.Component{
         );
 
         return(
-            <ul className="gnb_submenu">
+            <ul className="gnb_submenu" onMouseLeave = {this.props.mouseLeave}>
                 {itemList}
             </ul>
         );

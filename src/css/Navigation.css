@@ -1,6 +1,7 @@
 .gnb_wrap{
     /* width: 1200px; */
-    margin: 10px auto;
+    margin: 0px auto;
+    margin-top: 10px;
 }
 
 /* -------------------- global_menu -------------------- */
@@ -148,13 +149,13 @@
 
 .gnb_menu_item{
     display: inline-block;
-    margin-left:10px;
+    /* margin-left:10px; */
 }
 
 .gnb_menu_item>a{
     display: block;
     font-weight: bold;
-    padding: 20px 10px;
+    padding: 20px 20px;
     box-sizing: border-box;
     color : #333;
 }

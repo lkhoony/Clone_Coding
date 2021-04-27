@@ -93,10 +93,11 @@ class Navigation extends React.Component{
                 }
             ]
         }
-        this.toggleActive = this.toggleActive.bind(this);
+        this.mouseOn = this.mouseOn.bind(this);
+        this.mouseLeave = this.mouseLeave.bind(this);
     }
 
-    toggleActive(index,e){
+    mouseOn(index,e){
         let menuList = this.state.menuList;
         // 이전의 active 제거하고 해당 index에 active 추가
         for(var i=0; i<menuList.length; i++){
@@ -110,6 +111,17 @@ class Navigation extends React.Component{
         });
     }
 
+    mouseLeave(){
+        let menuList = this.state.menuList;
+        // 이전의 active 제거하고 해당 index에 active 추가
+        for(var i=0; i<menuList.length; i++){
+            menuList[i]['active']=false;
+        }
+        this.setState({
+            menuList : menuList
+        });
+    }
+
     render() {
 
         const menuList = this.state.menuList;
@@ -117,14 +129,10 @@ class Navigation extends React.Component{
             (item,index) => 
                 <li className="gnb_menu_item" key={item.id}>
                     <Link to={item.url}
-                            onMouseOver = {(e)=>this.toggleActive(index,e)}
+                            onMouseOver = {(e)=>this.mouseOn(index,e)}
                             className={item.active ? "active" : ""}
                             >{item.title}</Link>
-                    {/* <a href={item.url}
-                        onMouseOver = {(e)=>this.toggleActive(index,e)}
-                        // pass parameter to event handler
-                        className={item.active ? "active" : ""}>{item.title}</a> */}
-                        { item.active && <Submenu items={item.submenu}></Submenu>} 
+                        { item.active && <Submenu items={item.submenu} mouseLeave = {this.mouseLeave}></Submenu>} 
                 </li>
         );
 
@@ -163,7 +171,7 @@ class Navigation extends React.Component{
                         </ul>
                     </div>
                 </div>
-                <div className="gnb_menu_wrap">
+                <div className="gnb_menu_wrap" >
                     {/* <!-- GNB, LNB --> */}
                     
                     {/* <!-- left menu --> */}
@@ -180,7 +188,7 @@ class Navigation extends React.Component{
                                             <li><a href="">펜션/풀빌라예약</a></li>
                                             <li><a href="">호텔예약</a></li>
                                             <li><a href="">항공예약</a></li>
-                                            <li><a href=""></a>투어/입장권</li>
+                                            <li><a href="">투어/입장권</a></li>
                                             <li><a href="">투어/입장권</a></li>
                                         </ul>
                                     </dd>
@@ -189,7 +197,7 @@ class Navigation extends React.Component{
                             {/* <!-- 전체메뉴 inner --> */}
                         </div>
 
-                        <ul className="gnb_menu_list">
+                        <ul className="gnb_menu_list" onMouseLeave = {()=>this.mouseLeave()}>
                             {menuItems}
                         </ul>
                     </div>
