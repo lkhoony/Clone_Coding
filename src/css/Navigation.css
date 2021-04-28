@@ -131,12 +131,70 @@
     color : #333;
 }
 
+
+.hole_menu.on{
+    position: relative;
+    margin: -1px 0 -2px 0;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid rgb(175, 174, 174);
+    z-index: 1000;
+    color: #e5236d;
+}
+
 .hole_menu:hover{
     color: #e5236d !important;
 }
 
+.hole_menu_wrap{
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    background: white;
+    z-index: 100;
+    border-top: 1px solid rgba(0,0,0);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
 .hole_menu_inner{
-    display: none;
+    /* display: none; */
+    /* position: absolute; */
+    margin: 0 auto;
+    width: 1200px;
+    vertical-align: top;
+}
+
+.hole_menu_inner:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.hole_menu_inner_item{
+    float: left;
+    /* display: inline-block; */
+    padding: 30px;
+    width: 250px;
+    height : 300px;
+}
+
+.hole_menu_inner_item dt{
+    color: #e5236d;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 2px solid rgba(0,0,0);
+}
+
+.hole_menu_inner_item ul{
+    padding-top : 10px;
+}
+
+.hole_menu_inner_item ul li{
+    padding-bottom: 5px;
+}
+
+.hole_menu_inner_item ul li a{
+    color : #333;    
 }
 
 .gnb_menu_list{

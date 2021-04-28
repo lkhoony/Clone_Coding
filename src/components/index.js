@@ -5,3 +5,5 @@ export { default as Form} from './Form.js'
 export { default as Sns} from './Sns.js'
 export { default as Submain } from './Submain.js';
 export { default as Carousel } from './Carousel.js';
+export { default as HoleMenu } from './HoleMenu';
+export { default as HoleMenuItem } from './HoleMenuItem';

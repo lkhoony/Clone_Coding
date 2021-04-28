@@ -1,6 +1,6 @@
 import React from 'react';
 import Submenu from './Submenu.js';
-
+import { HoleMenu } from '.'
 import '../css/Navigation.css';
 import App from '../App.js';
 import { Link } from "react-router-dom";
@@ -10,6 +10,7 @@ class Navigation extends React.Component{
     constructor(props){
         super(props);
         this.state={
+            holeMenuOn : false,
             menuList : [
                 {   
                     id : 0,
@@ -95,6 +96,16 @@ class Navigation extends React.Component{
         }
         this.mouseOn = this.mouseOn.bind(this);
         this.mouseLeave = this.mouseLeave.bind(this);
+        this.holeMenuToggle = this.holeMenuToggle.bind(this);
+    }
+
+    holeMenuToggle(e){
+
+        console.log(e);
+
+        this.setState({
+            holeMenuOn : !this.state.holeMenuOn
+        });
     }
 
     mouseOn(index,e){
@@ -176,27 +187,9 @@ class Navigation extends React.Component{
                     
                     {/* <!-- left menu --> */}
                     <div className="gnb_menu_wrap_l">
-                        <a href="" className="hole_menu">전체메뉴</a>
-                        <div className="hole_menu_inner"> 
-                            {/* <!-- 전체메뉴 inner --> */}
-                            <div className="hole_menu_inner_item">
-                                <dl>
-                                    <dt>국내여행</dt>
-                                    <dd>
-                                        <ul>
-                                            <li><a href="">자유여행</a></li>
-                                            <li><a href="">펜션/풀빌라예약</a></li>
-                                            <li><a href="">호텔예약</a></li>
-                                            <li><a href="">항공예약</a></li>
-                                            <li><a href="">투어/입장권</a></li>
-                                            <li><a href="">투어/입장권</a></li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-                            </div> 
-                            {/* <!-- 전체메뉴 inner --> */}
-                        </div>
-
+                        <div className={"hole_menu" + (this.state.holeMenuOn ? " on" : "")} onClick={this.holeMenuToggle}>전체메뉴</div>
+                        {this.state.holeMenuOn && <HoleMenu menuList = {this.state.menuList} ></HoleMenu>}
+                        
                         <ul className="gnb_menu_list" onMouseLeave = {()=>this.mouseLeave()}>
                             {menuItems}
                         </ul>
