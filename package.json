@@ -13,7 +13,10 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-slick": "^0.28.1",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "redux" : "4.0.5",
+    "react-redux" : "^7.2.4",
+    "immutable" : "4.0.0-rc.12"
   },
   "scripts": {
     "start": "react-scripts start",

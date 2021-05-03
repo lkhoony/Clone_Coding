@@ -4,7 +4,11 @@ import { HoleMenuItem } from '.'
 const HoleMenu = (props) => {
     
     const menuList = props.menuList.map(
-        (menu) => <HoleMenuItem title={menu.title} submenu={menu.submenu} key={menu.id}></HoleMenuItem>
+        (menu) => <HoleMenuItem 
+                    title={menu.title} 
+                    submenu={menu.submenu} 
+                    key={menu.id} 
+                    url={menu.url}></HoleMenuItem>
     );
 
     return(

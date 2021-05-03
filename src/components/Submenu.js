@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/Submenu.css';
+import { Link, useRouteMatch } from 'react-router-dom';
 
 class Submenu extends React.Component{
 
@@ -13,13 +14,16 @@ class Submenu extends React.Component{
     render() {
         
         const items = this.props.items;
+        // const { path, url } = useRouteMatch();
+
         const itemList = items.map(
-            (item, index) => 
+            (item) => 
                 <li className="submenu_item active" 
-                    key={index}>
-                    <a href="" className="submenu_link">
-                        <span>{item}</span>
-                    </a>
+                    key={item.id}>
+
+                    <Link className="submenu_link" to={this.props.url + "/" + item.id}>
+                        <span>{item.title}</span>
+                    </Link>
                 </li>
         );
 

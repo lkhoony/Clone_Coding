@@ -1,5 +1,7 @@
 import React from 'react';
 import Contents from './Contents.js';
+import action from '../redux/actions';
+import {connect} from 'react-redux';
 
 import '../css/Section.css'
 
@@ -40,6 +42,11 @@ class Section extends React.Component {
         })
     }
 
+    myFuction() {
+        console.log(this.props.text);
+        this.props.dispatch(action.eventAction.setText({text : "교육끝"}));
+    }
+
     render() {
         // const renders = this.state.renders;
         const renders = [];
@@ -66,9 +73,13 @@ class Section extends React.Component {
                 {/* <!-- section --> */}
                 <button className="prevBtn" onClick={this.slideImages} value="prev">prev</button>
                 <button className="nextBtn" onClick={this.slideImages} value="next">next</button>
+
+                <button onClick={()=>this.myFuction()} value="prev">prev</button>
+                <button onClick={this.slideImages} value="next">next</button>
+
             </div>
         );
     }
 }
 
-export default Section
+export default connect()(Section);

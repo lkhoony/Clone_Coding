@@ -16,13 +16,34 @@ class Navigation extends React.Component{
                     id : 0,
                     title : "해외여행",
                     submenu : [
-                        "미리 준비하는 해외여행",
-                        "동남아/대만/서남아",
-                        "중국/홍콩/극동러시아",
-                        "일본",
-                        "유럽/아프리카",
-                        "남태평양/호주/뉴질랜드",
-                        "미주/중남미/하와이"
+                        {
+                            id : 0,
+                            title : "미리 준비하는 해외여행"
+                        },
+                        {
+                            id : 1,
+                            title : "동남아/대만/서남아"
+                        },
+                        {
+                            id : 2,
+                            title : "중국/홍콩/극동러시아"
+                        },
+                        {
+                            id : 3,
+                            title : "일본"
+                        },
+                        {
+                            id : 4,
+                            title : "유럽/아프리카"
+                        },
+                        {
+                            id : 5,
+                            title : "남태평양/호주/뉴질랜드"
+                        },
+                        {   
+                            id : 6,
+                            title : "미주/중남미/하와이"
+                        }
                     ],
                     active : false,
                     subOn : false,
@@ -32,11 +53,26 @@ class Navigation extends React.Component{
                     id : 1,
                     title : "국내여행",
                     submenu : [
-                        "호텔예약",
-                        "펜션/풀빌라 예약",
-                        "항공",
-                        "제주여행",
-                        "투어 입장권"
+                        {
+                            id : 0,
+                            title : "호텔예약"
+                        },
+                        {
+                            id : 1,
+                            title : "펜션/풀빌라 예약",
+                        },
+                        {
+                            id : 2,
+                            title : "항공",
+                        },
+                        {
+                            id : 3,
+                            title : "제주여행",
+                        },
+                        {
+                            id : 4,
+                            title : "투어 입장권",
+                        }
                     ],
                     active : false,
                     subOn : false,
@@ -46,9 +82,18 @@ class Navigation extends React.Component{
                     id : 2,
                     title : "항공",
                     submenu : [
-                        "항공예약",
-                        "전세계 할인 항공",
-                        "단체항공 견적문의"
+                        {
+                            id : 0,
+                            title : "항공예약"
+                        },
+                        {
+                            id : 1,
+                            title : "전세계 할인 항공",
+                        },
+                        {
+                            id : 2,
+                            title : "단체항공 견적문의",
+                        }
                     ],
                     active : false,
                     subOn : false,
@@ -58,8 +103,14 @@ class Navigation extends React.Component{
                     id : 3,
                     title : "호텔/펜션",
                     submenu : [
-                        "호텔예약",
-                        "펜션/풀빌라 예약"
+                        {
+                            id : 0,
+                            title : "호텔예약"
+                        },
+                        {
+                            id : 1,
+                            title : "펜션/풀빌라 예약",
+                        }
                     ],
                     active : false,
                     subOn : false,
@@ -69,13 +120,34 @@ class Navigation extends React.Component{
                     id : 4,
                     title : "투어/입장권",
                     submenu : [
-                        "제주",
-                        "서울",
-                        "경상",
-                        "경기",
-                        "전라",
-                        "강원",
-                        "충청"
+                        {
+                            id : 0,
+                            title : "제주"
+                        },
+                        {
+                            id : 1,
+                            title : "서울",
+                        },
+                        {
+                            id : 2,
+                            title : "경상",
+                        },
+                        {
+                            id : 3,
+                            title : "경기",
+                        },
+                        {
+                            id : 4,
+                            title : "전라",
+                        },
+                        {
+                            id : 5,
+                            title : "강원",
+                        },
+                        {
+                            id : 6,
+                            title : "충청",
+                        }
                     ],
                     active : false,
                     subOn : false,
@@ -85,8 +157,14 @@ class Navigation extends React.Component{
                     id : 5,
                     title : "테마여행",
                     submenu : [
-                        "허니문",
-                        "골프"
+                        {
+                            id : 0,
+                            title : "허니문",
+                        },
+                        {
+                            id : 1,
+                            title : "골프",
+                        }
                     ],
                     active : false,
                     subOn : false,
@@ -143,7 +221,7 @@ class Navigation extends React.Component{
                             onMouseOver = {(e)=>this.mouseOn(index,e)}
                             className={item.active ? "active" : ""}
                             >{item.title}</Link>
-                        { item.active && <Submenu items={item.submenu} mouseLeave = {this.mouseLeave}></Submenu>} 
+                        { item.active && <Submenu items={item.submenu} url={item.url} mouseLeave = {this.mouseLeave}></Submenu>} 
                 </li>
         );
 
